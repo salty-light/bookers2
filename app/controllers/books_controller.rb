@@ -13,14 +13,16 @@ class BooksController < ApplicationController
   def index
   end
 def destroy
-  book_image = 
+  book_image =
   post_image.
   redirect_
-  def show
-  end
+
 end
+ def show
+  end
  private
 
   def book_params
     params.require(:book).permit(:title, :body)
   end
+end
