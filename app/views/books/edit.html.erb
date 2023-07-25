@@ -6,6 +6,6 @@
 <label for="inputName">Opinion</label>
 <%= f.text_field :body, autofocus: true, id:"inputName" %>
 <%= f.submit "Update Book" %>
-<%= link_to "show", book_path(@book.id)  %>
-    <%= link_to "back",books_path(@book.id)  %>
+<%= link_to "Show", book_path(@book.id)  %>
+    <%= link_to "Back", books_path(@book.id)  %>
 <%  end  %>

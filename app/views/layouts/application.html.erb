@@ -42,14 +42,18 @@
        <li>
         <%= link_to   books_path,class:"nav-link text-light" do %>
         <i class="fas fa-book"></i>
-        Book <%end%>
+        Books <%end%>
       </li>
 
       <li>
         <%= link_to   destroy_user_session_path  ,method: :delete ,class:"nav-link text-light" do %>
         <i class="fas fa-sign-out-alt"></i>
-        Log_out <%end%>
+        Log out <%end%>
       </li>
+
+
+
+
 
     <% else %>
       <li>
@@ -63,25 +67,18 @@
         <i class="fas fa-link"></i>
         About <%end%>
       </li>
-
-
-
-
-
-
-      <li>
-        <%= link_to  new_user_session_path  ,class:"nav-link text-light" do %>
-        <i class="fas fa-sign-in-alt"></i>
-        Log_in <%end%>
-      </li>
       <li>
         <%= link_to    new_user_registration_path,class:"nav-link text-light" do %>
         <i class="fas fa-sign-in-alt"></i>
-        Sign-up <%end%>
+        Sign up <%end%>
       </li>
-
-    <% end %>
- </ul>
+      <li>
+        <%= link_to  new_user_session_path  ,class:"nav-link text-light" do %>
+        <i class="fas fa-sign-in-alt"></i>
+        Log in <%end%>
+      </li>
+     <% end %>
+           </ul>
       </div>
       </div>
       </nav>
