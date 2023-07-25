@@ -1,1 +1,28 @@
-index
+<body>
+    <main>
+
+    <p id="notice"></p>
+    <div class="container px-5 px-sm-0">
+    <div class="row">
+    <div class="col-md-3">
+    <%= render 'info' , user: @user%>
+    <%= render 'books/new',book:Book.new %>
+     </div>
+     <div class="col-md-8 offset-md-1">
+    <p>Book detail</p>
+    <% @users.each do |user| %>
+    <%= image_tag user.get_profile_image(100,100) %>
+
+    <%= link_to user_path(@user.id) do %>
+    <%= link_to "show", user_path(@user.id)  %>
+    <% end %>
+
+
+   <span><%= user.name %></span>
+
+   <span><%= user.introduction %></span>
+    <% end %>
+     </div>
+     </div>
+    </main>
+</body>

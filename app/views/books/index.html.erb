@@ -1,3 +1,30 @@
-<h1>Books#index</h1>
+<body>
+  <main>
+    <p id="notice"></p>
+    <div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
 
-<p>Find me in app/views/books/index.html.erb</p>
+
+
+    <%= render 'users/info' , user: @user%>
+
+<%= render 'new',book: @book %>
+  </div>
+    <div class="col-md-8 offset-md-1">
+   <p>Books</p>
+   <p>Title</p><p>Opinion</p>
+    <% @books.each do |book| %>
+
+        <%= link_to book_path(@user.id) do %>
+            <%= image_tag book.user.get_profile_image(100,100) %>
+            <%= book.title %>
+        <%  end %>
+
+       <span><%= book.body %></span>
+    <% end %>
+    </div>
+                           </div>
+                           </div>
+                           </main>
+                           </body>
