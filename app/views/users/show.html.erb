@@ -49,17 +49,27 @@
                   <h2>Books</h2>
                   <table clas="table table-hover table-inverse">
                     <thead>
+
                       <tr>
+
                         <th></th>
-    <th>Title</th>
-    
-    <th>Opinion</th>
-    
-    <% @users.each do |user| %>
-    <span><%= user.name %></span>
-   <span><%= user.introduction %></span>
+ <th>Title</th>
+ <th>Opinion</th>
+  <% @books.each do |book| %>
+
+       <%= link_to user_path(book.user.id) do %>
+        <%= image_tag book.user.get_profile_image(100,100) %>
+
+        <%  end %>
+        <%= link_to book_path(book.id) do %>
+
+            <%= book.title %>
+        <%  end %>
+
+       <span><%= book.body %></span>
     <% end %>
-    
+
+
     <thcolspan="3"></th>
     </tr>
     </thead>

@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <body>
   <main>
     <p id="notice"></p>
@@ -16,8 +20,12 @@
    <p>Title</p><p>Opinion</p>
     <% @books.each do |book| %>
 
-        <%= link_to book_path(@user.id) do %>
-            <%= image_tag book.user.get_profile_image(100,100) %>
+       <%= link_to user_path(book.user.id) do %>
+        <%= image_tag book.user.get_profile_image(100,100) %>
+
+        <%  end %>
+        <%= link_to book_path(book.id) do %>
+
             <%= book.title %>
         <%  end %>
 
